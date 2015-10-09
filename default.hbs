@@ -1,0 +1,47 @@
+<!doctype html>
+{{! Needs amp or ⚡ tag: https://github.com/ampproject/amphtml }}
+<html amp lang="en">
+
+<!--
+Theme: Ampsper
+Author: Varun Dhanwantri
+Version: V0 in progress
+Amp Project: https://github.com/ampproject/amphtml
+
+This theme is the barebones Amp Installation.
+For Amp validation please use <
+
+Visit us on Github https://github.com/ampproject/amphtml
+-->
+
+	<head>
+		<meta charset="utf-8">
+		{{! Page Meta }}
+		<title>{{meta_title}}</title>
+		<meta name="description" content="{{meta_description}}" />
+		{{! Cononical points to non-AMP HTML version or to itself. Removed to Validate AMP }}
+		<!-- <link rel="canonical" href="/" /> -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+		<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "NewsArticle",
+	            "headline": "Open-source framework for publishing content everywhere",
+	            "datePublished": "2015-10-07T12:02:41Z",
+	            "image": [
+	              "logo.jpg"
+	            ]
+	          }
+	        </script>
+	        <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
+	        <!-- NOTE: Please add custom CSS from within Ghost Head using <style amp-custom></style> to avoid AMP invalidation -->
+	        <script async src="https://cdn.ampproject.org/v0.js"></script>
+	        {{ghost_head}}
+	      </head>
+	      <body class="{{body_class}}">
+	        <div class="wrapper_ampsper">
+				{{{body}}}
+			</div>
+			{{ghost_foot}}
+	      </body>
+	    </html>
