@@ -1,16 +1,14 @@
 # AMPSPER
 
-A simple skeleton Ghost theme that uses [Google AMP](https://github.com/ampproject/amphtml)
+Casper Ghost theme modified to use [Google AMP](https://github.com/ampproject/amphtml)
 
-Version: 0 as AMP is a newborn
+Version: 0
 
 # Installation
 
 Create a new directory called ampsper, under /themes of your Ghost installation.
 
 Activate theme from your settings.
-
-Note: The /assets folder remains in case we prefer adding in custom styling and functions
 
 # Adding custom style to your Ghost blog
 
@@ -20,11 +18,7 @@ Add the following section within your Ghost custom Header with the necessary for
 <style amp-custom> </style>
 ```
 
-List of class and id names can be seen from within the skeleton theme files, suffixed with _ampsper.
-
-## Styling best practice
-
-1. Please use ```em``` or ```rem``` values
+and remove ref to the screen.css file.
 
 # Future
 
