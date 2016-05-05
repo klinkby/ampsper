@@ -16,7 +16,7 @@ Visit us on Github https://github.com/ampproject/amphtml
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	{{! Page Meta }}
+  	{{! Page Meta }}
 	<title>{{meta_title}}</title>
 	<meta name="description" content="{{meta_description}}" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
@@ -24,18 +24,12 @@ Visit us on Github https://github.com/ampproject/amphtml
 	<!-- <link rel="canonical" href="/" /> -->
 	<!-- Uncomment the below to enable favicon. Removed to Validate AMP -->
 	<!-- <link rel="shortcut icon" href="{{asset "favicon.ico"}}"> -->
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
-	<style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
-	<!-- NOTE: In order to reap full benefits from AMP, remove the custom stylesheet link to screen.css and replace it with:
-	<style amp-custom>
-		/* Add your custom style here */
-	</style>
-	You can also do this through Ghost modified head -->
+<!--	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />-->
 	<!-- Bellow will not comply with AMP Validator but we do need some sweet design -->
-	<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+<!--	<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" /> -->
 	<!-- The AMP v0.js file conducting magic -->
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
-	
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Merriweather|Inconsolata" rel="stylesheet">	
 	{{ghost_head}}
 </head>
 <body class="{{body_class}} nav-closed">
@@ -45,15 +39,18 @@ Visit us on Github https://github.com/ampproject/amphtml
 	</div>
 	<footer class="site-footer clearfix">
 		<section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-		<section class="poweredby">Proudly published with <a class="icon-ghost" href="http://tryghost.org" target="_blank">Ghost</a>, powered by <a href="https://github.com/ampproject" target="_blank">AMP</a></section>
+		<section class="poweredby">Proudly published with <a class="icon-ghost" href="http://tryghost.org" target="_blank">Ghost</a>, powered by <a href="https://www.ampproject.org/" target="_blank">AMP</a></section>
 	</footer>
 {{ghost_foot}}
 
 <!-- Keeping these files from defualt Casper for now, as we optimize slowly -->
+<!--
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+-->
 {{! The main JavaScript file for Casper }}
+<!--
 <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-
+-->
 </body>
 </html>
