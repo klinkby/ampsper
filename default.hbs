@@ -1,18 +1,6 @@
 <!doctype html>
-{{! Needs amp or ⚡ tag: https://github.com/ampproject/amphtml. This may change soon *wink wink* }}
-<html amp lang="en">
-
-<!--
-Theme: Ampsper
-Author: Varun Dhanwantri
-Version: V0 in progress
-Amp Project: https://github.com/ampproject/amphtml
-
-This theme is the barebones Amp Installation.
-For Amp validation please use #development=1 at the end of your URL
-
-Visit us on Github https://github.com/ampproject/amphtml
--->
+<!-- Amp #development=1 validating Ghost theme: https://github.com/klinkby/ampsper -->
+<html lang="en" ⚡>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,37 +8,21 @@ Visit us on Github https://github.com/ampproject/amphtml
 	<title>{{meta_title}}</title>
 	<meta name="description" content="{{meta_description}}" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
-	<!-- Cononical points to non-AMP HTML version or to itself. Removed to Validate AMP -->
-	<!-- <link rel="canonical" href="/" /> -->
-	<!-- Uncomment the below to enable favicon. Removed to Validate AMP -->
-	<!-- <link rel="shortcut icon" href="{{asset "favicon.ico"}}"> -->
-<!--	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />-->
-	<!-- Bellow will not comply with AMP Validator but we do need some sweet design -->
-<!--	<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" /> -->
-	<!-- The AMP v0.js file conducting magic -->
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Merriweather|Inconsolata" rel="stylesheet">	
-	{{ghost_head}}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Merriweather|Inconsolata" rel="stylesheet">	
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    {{ghost_head}}
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 </head>
 <body class="{{body_class}} nav-closed">
 	{{navigation}}
 	<div class="site-wrapper">
-		{{{body}}}
+        {{{body}}}
 	</div>
 	<footer class="site-footer clearfix">
 		<section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
 		<section class="poweredby">Proudly published with <a class="icon-ghost" href="http://tryghost.org" target="_blank">Ghost</a>, powered by <a href="https://www.ampproject.org/" target="_blank">AMP</a></section>
 	</footer>
-{{ghost_foot}}
-
-<!-- Keeping these files from defualt Casper for now, as we optimize slowly -->
-<!--
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
--->
-{{! The main JavaScript file for Casper }}
-<!--
-<script type="text/javascript" src="{{asset "js/index.js"}}"></script>
--->
+    {{ghost_foot}}
 </body>
 </html>
